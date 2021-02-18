@@ -6,7 +6,7 @@ $currentList = $_GET['listId'];
 $allItems = getallItemsByListId($currentList);
 ?>
 <ul>
-    <?php foreach ($allItems as $Item){
+    <?php foreach (array_reverse($allItems) as $Item){
         if($Item['type'] == "1"){
         $classDone = $Item['done'] == "1" ? 'class="done" ' : '';
             ?>
