@@ -16,7 +16,7 @@ $allList = getAllListsByUserId($currentuser);
             </a>
         </li>
         <?php } else if($List['type'] == "2") {
-            $name = explode("/", $List['name']);
+            $name = explode("-", $List['name']);
             ?>
             <li>
             <a href="<?=$name[0]?>" target="_blank"><?= strtolower(end($name))?></a>
