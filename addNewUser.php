@@ -9,6 +9,8 @@ $password = $_POST['password'];
 $newuser = new User($fname, $lname, $email, hash('sha512', $password), "uploads\UserProfiles\defaultProfile.png");
 $newuser->addUser();
 
+//Test
+
 $id = getIdByEmailPassword($email, hash('sha512', $password));
 echo json_encode(array("id" =>$id[0],"fname" =>$fname, "lname" =>$lname, "email" =>$email, "ProfileImage" =>"uploads\UserProfiles\defaultProfile.png"));
 
