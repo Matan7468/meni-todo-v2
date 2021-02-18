@@ -19,15 +19,10 @@ $allItems = getallItemsByListId($currentList);
             <img src="<?= $Item['content'] ?>" height="150dp" width="150dp" ></img>
         </li>
         <?php } else if($Item['type'] == "3") {
-            $name = explode("/", $Item['content']);
-            $href = "";
-            foreach($name as $part){
-                if($part != end($name))
-                    $href .= $part;
-            }
+            $name = explode("-", $Item['content']);
             ?>
             <li>
-            <a href="<?=$href?>" target="_blank"><?= strtolower(end($name))?></a>
+            <a href="<?=$name[0]?>" target="_blank"><?= strtolower(end($name))?></a>
         </li>
         <?php } ?>
     <?php } ?>
