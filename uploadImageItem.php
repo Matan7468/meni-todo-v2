@@ -15,13 +15,14 @@ if(in_array($fileActualExt, $allowed)){
     if($fileError === 0){
         if($fileSize < 1000000){
             $fileNewName = uniqid('', true).".".$fileActualExt;
-            $fileDestination = '/home/vol14_5/epizy.com/epiz_27957177/htdocs/uploads\\Items\\'.$fileNewName;
+            $fileDestination = $fileDestination = __DIR__ .'uploads\\Items\\'.$fileNewName;
+            $fileUrl = 'uploads/Items/' . $fileNewName;
             move_uploaded_file($fileTmpName, $fileDestination);
             if($fileActualExt === 'txt'){
-                $file = new ListItem($_POST['listId'], $fileDestination."/".$filename);
+                $file = new ListItem($_POST['listId'], $fileUrl."/".$filename);
                 $file->addListItem(3);
             }else{
-                $file = new ListItem($_POST['listId'], $fileDestination);
+                $file = new ListItem($_POST['listId'], $fileUrl);
                 $file->addListItem(2);
             }
             echo $fileDestination;
