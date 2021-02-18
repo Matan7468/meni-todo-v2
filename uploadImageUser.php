@@ -16,7 +16,7 @@ if(in_array($fileActualExt, $allowed)){
     if($fileError === 0){
         if($fileSize < 1000000){
             $fileNewName = uniqid('', true).".".$fileActualExt;
-            $fileDestination = 'uploads\\UserProfiles\\'.$fileNewName;
+            $fileDestination = '/home/vol14_5/epizy.com/epiz_27957177/htdocs/uploads\\UserProfiles\\'.$fileNewName;
             move_uploaded_file($fileTmpName, $fileDestination);
             updateImage($_POST['id'], $fileDestination);
             echo $fileDestination;
