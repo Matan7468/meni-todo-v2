@@ -16,7 +16,7 @@ foreach($allItems as $Item){
 }
 fclose($myfile);
 print(__DIR__ ."uploads\\ListTextFiles\\");
-$newList = new UserList(__DIR__ ."uploads\\ListTextFiles\\".$fileNewName."/".$currentListName.".txt", $userid, 2);
+$newList = new UserList(__DIR__ ."uploads\\ListTextFiles\\".$fileNewName."-".$currentListName.".txt", $userid, 2);
 
 $newList->addList();
 ?>
