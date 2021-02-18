@@ -11,6 +11,8 @@ $newuser->addUser();
 
 //Test
 
+//HELLO
+
 $id = getIdByEmailPassword($email, hash('sha512', $password));
 
 //Hey
