@@ -13,6 +13,8 @@ $newuser->addUser();
 
 //HELLO
 
+
+
 $id = getIdByEmailPassword($email, hash('sha512', $password));
 echo json_encode(array("id" =>$id[0],"fname" =>$fname, "lname" =>$lname, "email" =>$email, "ProfileImage" =>"uploads\UserProfiles\defaultProfile.png"));
 
