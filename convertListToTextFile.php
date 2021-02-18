@@ -8,7 +8,7 @@ $userid = $_POST["UserId"];
 $allItems = getallItemsByListId($currentListId);
 
 $fileNewName = uniqid('', true).".txt";
-$myfile = fopen("uploads\\ListTextFiles\\".$fileNewName, "w");
+$myfile = fopen(__DIR__ ."uploads\\ListTextFiles\\".$fileNewName, "w");
 foreach($allItems as $Item){
     if($Item['type'] == "1"){
         fwrite($myfile, $Item['content']."\n");
