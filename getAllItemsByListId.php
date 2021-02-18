@@ -27,7 +27,7 @@ $allItems = getallItemsByListId($currentList);
             }
             ?>
             <li>
-            <a href="<?=$name[6]?>" target="_blank"><?= strtolower(end($name))?></a>
+            <a href="<?=$href?>" target="_blank"><?= strtolower(end($name))?></a>
         </li>
         <?php } ?>
     <?php } ?>
