@@ -23,7 +23,7 @@ $allItems = getallItemsByListId($currentList);
             $href = "";
             foreach($name as $part){
                 if($part != end($name))
-                    $href += $part;
+                    $href .= $part;
             }
             ?>
             <li>
