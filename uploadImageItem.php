@@ -15,7 +15,7 @@ if(in_array($fileActualExt, $allowed)){
     if($fileError === 0){
         if($fileSize < 1000000){
             $fileNewName = uniqid('', true).".".$fileActualExt;
-            $fileDestination = $fileDestination = __DIR__ .'uploads\\Items\\'.$fileNewName;
+            $fileDestination = __DIR__ .'uploads\\Items\\'.$fileNewName;
             $fileUrl = 'uploads/Items/' . $fileNewName;
             move_uploaded_file($fileTmpName, $fileDestination);
             if($fileActualExt === 'txt'){
