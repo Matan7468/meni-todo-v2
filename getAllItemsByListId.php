@@ -19,7 +19,7 @@ $allItems = getallItemsByListId($currentList);
             <img src="<?= $Item['content'] ?>" height="150dp" width="150dp" ></img>
         </li>
         <?php } else if($Item['type'] == "3") {
-            $name = explode("/", $Item['content']);
+            $name = explode("-", $Item['content']);
             ?>
             <li>
             <a href="<?=$name[0]?>" target="_blank"><?= strtolower(end($name))?></a>
