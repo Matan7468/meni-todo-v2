@@ -19,7 +19,7 @@ if(in_array($fileActualExt, $allowed)){
             $fileUrl = 'uploads/Items/' . $fileNewName;
             move_uploaded_file($fileTmpName, $fileDestination);
             if($fileActualExt === 'txt'){
-                $file = new ListItem($_POST['listId'], $fileUrl."/".$filename);
+                $file = new ListItem($_POST['listId'], $fileUrl."-".$filename);
                 $file->addListItem(3);
             }else{
                 $file = new ListItem($_POST['listId'], $fileUrl);
